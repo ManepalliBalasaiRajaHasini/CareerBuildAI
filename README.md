@@ -43,6 +43,13 @@ CareerBuild-AI/
 │
 ├── app.py
 ```
+## Note
+
+The `app.py` file is not included in this repository because it contains API integration and confidential API credentials.
+
+The project source code (HTML, CSS, JavaScript, and templates) is available for reference.
+
+Backend functionality can be configured by adding your own Google Gemini API keys.
 
 ---
 
