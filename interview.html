@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>AI Interview Hub</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/interview.css') }}">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+<div class="logo">
+
+🤖 CareerBuild AI
+
+</div>
+
+<ul>
+
+<li><a href="/">Home</a></li>
+
+<li><a href="/courses">Courses</a></li>
+
+<li><a href="/career">Career AI</a></li>
+
+<li><a class="active" href="/interview">Interview</a></li>
+
+</ul>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<h1>
+
+AI Interview Hub
+
+</h1>
+
+<p>
+
+Practice HR, Technical, Coding and AI Mock Interviews with Artificial Intelligence.
+
+</p>
+
+</section>
+
+<!-- ================= INTERVIEW CARDS ================= -->
+
+<section class="card-container">
+
+<div class="card hr-card">
+
+<div class="icon">
+
+👨‍💼
+
+</div>
+
+<h2>
+
+HR Interview
+
+</h2>
+
+<p>
+
+Practice communication, HR and behavioral interview questions.
+
+</p>
+
+<button
+onclick="startInterview('HR')">
+
+Start →
+
+</button>
+
+</div>
+
+<div class="card technical-card">
+
+<div class="icon">
+
+💻
+
+</div>
+
+<h2>
+
+Technical Interview
+
+</h2>
+
+<p>
+
+Programming, DBMS, CN, OS, Java, Python and more.
+
+</p>
+
+<button
+onclick="startInterview('Technical')">
+
+Start →
+
+</button>
+
+</div>
+
+<div class="card coding-card">
+
+<div class="icon">
+
+👨‍💻
+
+</div>
+
+<h2>
+
+Coding Interview
+
+</h2>
+
+<p>
+
+Solve coding challenges with AI evaluation.
+
+</p>
+
+<button
+onclick="startInterview('Coding')">
+
+Start →
+
+</button>
+
+</div>
+
+<div class="card mock-card">
+
+<div class="icon">
+
+🤖
+
+</div>
+
+<h2>
+
+AI Mock Interview
+
+</h2>
+
+<p>
+
+Complete interview simulation with AI.
+
+</p>
+
+<button
+onclick="startInterview('Mock')">
+
+Start →
+
+</button>
+
+</div>
+
+</section>
+<!-- ================= CHAT CONTAINER ================= -->
+
+<section class="chat-container" id="chatSection">
+
+<div class="chat-header">
+
+<div>
+
+<h2>
+
+🤖 AI Interview Session
+
+</h2>
+
+<p id="interviewTitle">
+
+Choose an interview to begin.
+
+</p>
+
+</div>
+
+<div class="timer">
+
+⏱ <span id="timer">00:00</span>
+
+</div>
+
+</div>
+
+<!-- ================= Progress ================= -->
+
+<div class="progress-area">
+
+<div class="progress-text">
+
+<span>
+
+Question
+
+</span>
+
+<span id="questionCount">
+
+0 / 10
+
+</span>
+
+</div>
+
+<div class="progress-bar">
+
+<div id="progressFill">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= Chat Box ================= -->
+
+<div id="chatBox" class="chat-box">
+
+<div class="ai-message">
+
+<div class="avatar">
+
+🤖
+
+</div>
+
+<div class="message">
+
+<h4>
+
+CareerBuild AI
+
+</h4>
+
+<p>
+
+Welcome 👋
+
+<br><br>
+
+Select any interview card above to start your interview.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= Answer Area ================= -->
+
+<section class="answer-section">
+
+<textarea
+
+id="answer"
+
+placeholder="Type your answer here...">
+
+</textarea>
+
+<div class="button-group">
+
+<button id="submitAnswer">
+
+✅ Submit Answer
+
+</button>
+
+<button id="nextQuestion">
+
+➡ Next Question
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= AI Feedback ================= -->
+
+<section class="feedback-section">
+
+<div class="feedback-card">
+
+<h2>
+
+📊 Interview Performance
+
+</h2>
+
+<div id="feedback">
+
+<p>
+
+Your interview analysis will appear here.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= INTERVIEW RESULT ================= -->
+
+<section class="result-container">
+
+<div class="result-card">
+
+<h2>
+
+🏆 Interview Completed
+
+</h2>
+
+<div class="score-circle">
+
+<h1 id="finalScore">
+
+0%
+
+</h1>
+
+<p>
+
+Overall Score
+
+</p>
+
+</div>
+
+<div class="performance">
+
+<div class="skill">
+
+<span>🗣 Communication</span>
+
+<div class="skill-bar">
+
+<div id="communicationBar"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<span>💻 Technical Skills</span>
+
+<div class="skill-bar">
+
+<div id="technicalBar"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<span>🧠 Problem Solving</span>
+
+<div class="skill-bar">
+
+<div id="problemBar"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<span>😊 Confidence</span>
+
+<div class="skill-bar">
+
+<div id="confidenceBar"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="recommendation">
+
+<h3>
+
+🎯 AI Recommendation
+
+</h3>
+
+<p id="recommendationText">
+
+Complete your interview to receive personalized feedback.
+
+</p>
+
+</div>
+
+<div class="result-buttons">
+
+<button id="downloadReport">
+
+📄 Download Report
+
+</button>
+
+<button id="restartInterview">
+
+🔄 Restart Interview
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="features">
+
+<div class="feature-card">
+
+<div class="feature-icon">
+
+🤖
+
+</div>
+
+<h3>
+
+AI Powered
+
+</h3>
+
+<p>
+
+Real-time interview questions generated by Gemini AI.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="feature-icon">
+
+📊
+
+</div>
+
+<h3>
+
+Instant Analysis
+
+</h3>
+
+<p>
+
+Get AI-based scores, strengths and improvement suggestions.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="feature-icon">
+
+🎯
+
+</div>
+
+<h3>
+
+Placement Ready
+
+</h3>
+
+<p>
+
+Prepare for HR, Technical, Coding and Mock Interviews.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="feature-icon">
+
+🏆
+
+</div>
+
+<h3>
+
+Professional Report
+
+</h3>
+
+<p>
+
+Download your interview performance report.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 CareerBuild AI |
+AI Interview Platform |
+Built with ❤️ using Flask & Gemini AI
+
+</p>
+
+</footer>
+
+<script src="{{ url_for('static', filename='js/interview.js') }}"></script>
+
+</body>
+
+</html>

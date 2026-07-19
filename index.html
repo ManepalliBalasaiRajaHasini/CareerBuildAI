@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CareerBuild AI - Intelligent Career Guidance</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+
+        <i class="fa-solid fa-graduation-cap"></i>
+
+        CareerBuild AI
+
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+
+        <li><a href="/courses">Courses</a></li>
+
+        <li><a href="/interview">Interview</a></li>
+    </ul>
+
+    <a href="/courses" class="nav-btn">
+
+        Explore
+
+    </a>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<h1>
+Your AI Career
+Companion for
+Success
+</h1>
+<p>
+
+🚀 AI Career Guidance
+
+📚 Professional Courses
+
+🎓 AI Teacher
+
+💼 Interview Preparation
+
+📜 Certifications
+
+</p>
+<div class="hero-buttons">
+
+<a href="/courses" class="btn1">
+
+Explore Careers
+
+</a>
+
+<a href="/career" class="btn2">
+
+Start Learning
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-right">
+
+<img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=900&auto=format&fit=crop&q=80"
+alt="CareerBuild AI">
+
+</div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+<h2>
+
+Why Choose CareerBuild AI?
+
+</h2>
+
+<div class="feature-container">
+
+<div class="card">
+
+<i class="fas fa-robot"></i>
+
+<h3>
+
+AI Career Guidance
+
+</h3>
+
+<p>
+
+Receive personalized career guidance
+using Artificial Intelligence.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<i class="fas fa-road"></i>
+
+<h3>
+
+Career Roadmaps
+
+</h3>
+
+<p>
+
+Step-by-step roadmap
+to achieve your dream career.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<i class="fas fa-video"></i>
+
+<h3>
+
+AI Teacher
+
+</h3>
+
+<p>
+
+Understand difficult concepts
+through story based AI explanations.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<i class="fas fa-certificate"></i>
+
+<h3>
+
+Certification
+
+</h3>
+
+<p>
+
+Complete tests,
+earn certificates
+and improve your skills.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= CAREER PATHS ================= -->
+
+<section class="career-section">
+
+<h2>
+
+Explore Career Paths
+
+</h2>
+
+<div class="career-container">
+
+<div class="career-card">
+
+<i class="fas fa-laptop-code"></i>
+
+<h3>
+
+B.Tech
+
+</h3>
+
+<p>
+
+CSE
+
+AI
+
+ML
+
+Cyber Security
+
+Web Development
+
+</p>
+
+<a href="/courses">
+
+Explore
+
+</a>
+
+</div>
+
+
+<div class="career-card">
+
+<i class="fas fa-building-columns"></i>
+
+<h3>
+
+Banking
+
+</h3>
+
+<p>
+
+IBPS
+
+SBI
+
+RBI
+
+PO
+
+Clerk
+
+</p>
+
+<a href="/courses">
+
+Explore
+
+</a>
+
+</div>
+
+
+<div class="career-card">
+
+<i class="fas fa-train"></i>
+
+<h3>
+
+Railway
+
+</h3>
+
+<p>
+
+RRB NTPC
+
+Group D
+
+ALP
+
+Technician
+
+</p>
+
+<a href="/courses">
+
+Explore
+
+</a>
+
+</div>
+
+
+<div class="career-card">
+
+<i class="fas fa-plane"></i>
+
+<h3>
+
+Aviation
+
+</h3>
+
+<p>
+
+Pilot
+
+Cabin Crew
+
+Airport Jobs
+
+</p>
+
+<a href="/courses">
+
+Explore
+
+</a>
+
+</div>
+<div class="career-card">
+
+<i class="fas fa-shield-halved"></i>
+
+<h3>
+
+Defence
+
+</h3>
+
+<p>
+
+Army
+
+Navy
+
+Air Force
+
+NDA
+
+CDS
+
+</p>
+
+<a href="/courses">
+
+Explore
+
+</a>
+
+</div>
+
+
+<div class="career-card">
+
+<i class="fas fa-user-graduate"></i>
+
+<h3>
+
+Higher Studies
+
+</h3>
+
+<p>
+
+GATE
+
+GRE
+
+TOEFL
+
+Masters
+
+Research
+
+</p>
+
+<a href="/courses">
+
+Explore
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="works">
+
+<h2 style="text-align:center;font-size:42px;margin-bottom:60px;">
+
+How CareerBuild AI Works
+
+</h2>
+
+<div class="steps">
+
+<div class="step">
+
+<h1>1</h1>
+
+<h3>
+
+Choose Career
+
+</h3>
+
+<p>
+
+Select your dream career path
+and explore opportunities.
+
+</p>
+
+</div>
+
+
+<div class="step">
+
+<h1>2</h1>
+
+<h3>
+
+Learn with AI
+
+</h3>
+
+<p>
+
+Study using AI Teacher,
+Roadmaps and Practice Tests.
+
+</p>
+
+</div>
+
+
+<div class="step">
+
+<h1>3</h1>
+
+<h3>
+
+Get Job Ready
+
+</h3>
+
+<p>
+
+Prepare for interviews,
+earn certificates
+and get placement ready.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+<h2>
+
+Ready To Build Your Future?
+
+</h2>
+
+<p>
+
+Discover courses, AI guidance,
+career roadmaps,
+mock interviews,
+practice tests,
+and certifications.
+
+Start today with CareerBuild AI.
+
+</p>
+
+<a href="/career">
+
+Start Now
+
+</a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h2>
+
+CareerBuild AI
+
+</h2>
+
+<p>
+
+Your Intelligent Career Guidance Platform.
+
+Helping students discover careers,
+learn skills,
+prepare interviews
+and achieve their dream jobs.
+
+</p>
+
+<div class="footer-links">
+
+<a href="/">Home</a>
+
+<a href="/courses">Courses</a>
+
+<a href="/career">Career AI</a>
+
+<a href="/interview">Interview</a>
+
+</div>
+
+<p>
+
+© 2026 CareerBuild AI
+
+All Rights Reserved.
+
+</p>
+
+</footer>
+
+
+<!-- ================= FLOATING AI ================= -->
+
+<a href="/career" class="ai-chat-btn">
+
+<i class="fa-solid fa-brain"></i>
+
+<span>Career AI</span>
+
+</a>
+
+</body>
+
+</html>
