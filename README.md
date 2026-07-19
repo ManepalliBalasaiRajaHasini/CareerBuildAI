@@ -42,42 +42,6 @@ CareerBuild-AI/
 │   └── interview.html
 │
 ├── app.py
-├── requirements.txt
-└── README.md
-```
-
----
-
-## ⚙️ Installation
-
-Clone the repository
-
-```bash
-git clone https://github.com/YourUsername/CareerBuild-AI.git
-```
-
-Move into the project folder
-
-```bash
-cd CareerBuild-AI
-```
-
-Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-Run the project
-
-```bash
-python app.py
-```
-
-Open your browser
-
-```
-http://127.0.0.1:5000
 ```
 
 ---
